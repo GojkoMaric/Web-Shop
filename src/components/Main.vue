@@ -12,13 +12,13 @@
       <div class="row h-100">
         <div class="col prevent-overflow padding-0">
           <div class='text-center height-500'
-            style="background-image:url(https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)">
+            style="background-size: 100% 100%; background-image:url(https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)">
             <span class='text-in-picture white-color banner-text'>shop women</span>
             </div>
         </div>
         <div class="col padding-0">
           <div class='text-center height-500 padding-0'
-            style="background-image:url(https://images.pexels.com/photos/1282316/pexels-photo-1282316.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"
+            style="background-size: 100% 100%; background-image:url(https://images.pexels.com/photos/1282316/pexels-photo-1282316.jpeg)"
           >
             <span class="text-in-picture white-color banner-text">shop men</span>
           </div>
