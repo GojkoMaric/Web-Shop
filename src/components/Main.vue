@@ -1,24 +1,24 @@
 <template>
   <div>
     <div class="container height-500px prevent-overflow padding-0">
-      <div class='height-500 text-center' style="background-size: 100% 100%; background-image:url('https://images.unsplash.com/photo-1484502249930-e1da807099a5?ixlib=rb-1.2.1');">
+      <div class='height-500 text-center' style="background-size: 100% 100%;" :style="{ backgroundImage: `url('${imageFirst}')` }">
         <span class='text-in-picture inline-block-text'>
           <span class='white-color main-text inline-block-text'>TODAY</span>
           <span class='white-color inline-block-text ont-size-xx-large'>SHOP OUR NEW ARRIVALS</span>
         </span>
       </div>
     </div>
-    <div class="container height-500px">
-      <div class="row h-100">
+    <div class="container height-500px padding-0">
+      <div class="row h-100 margin-0">
         <div class="col prevent-overflow padding-0">
           <div class='text-center height-500'
-            style="background-size: 100% 100%; background-image:url(https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)">
+            style="background-size: 100% 100%;" :style="{ backgroundImage: `url('${imageSecond}')` }">
             <span class='text-in-picture white-color banner-text'>shop women</span>
             </div>
         </div>
-        <div class="col padding-0">
+        <div class="col prevent-overflow padding-0">
           <div class='text-center height-500 padding-0'
-            style="background-size: 100% 100%; background-image:url(https://images.pexels.com/photos/1282316/pexels-photo-1282316.jpeg)"
+            style="background-size: 100% 100%;" :style="{ backgroundImage: `url('${imageThird}')` }"
           >
             <span class="text-in-picture white-color banner-text">shop men</span>
           </div>
@@ -30,7 +30,18 @@
 
 <script>
 export default {
-  name: 'Main'
+  name: 'Main',
+  computed: {
+    imageFirst () {
+      return require('@/assets/main-image-1.png')
+    },
+    imageSecond () {
+      return require('@/assets/main-image-2.png')
+    },
+    imageThird () {
+      return require('@/assets/main-image-3.png')
+    },
+  }
 }
 </script>
 
@@ -82,5 +93,9 @@ export default {
 
  .font-size-xx-large {
   font-size: xx-large;
+ }
+
+ .margin-0 {
+   margin: 0;
  }
 </style>

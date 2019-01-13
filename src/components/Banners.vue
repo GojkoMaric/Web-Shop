@@ -3,7 +3,7 @@
     <p class='text-center font-x-large'>free delivery & returns on UK orders</p>
     <div class="row">
       <div class="col">
-        <img src="https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" height="100%" width="100%">
+        <img :src="imageFirst" alt="" height="100%" width="100%">
       </div>
       <div class="col">
         <p class="text-bold font-large top-padding">Today - Love dresses</p>
@@ -11,7 +11,7 @@
         <a href="#" class="link-style text-bold">READ MORE ></a>
       </div>
       <div class="col">
-        <img src="https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/Search/224x336/500760.jpg?X56" alt="" height="100%" width="100%">
+        <img :src="imageSecond" alt="" height="100%" width="100%">
       </div>
       <div class="col">
         <p class="text-bold font-large top-padding">The everyday bag</p>
@@ -24,7 +24,15 @@
 
 <script>
 export default {
-  name: 'Banners'
+  name: 'Banners',
+  computed: {
+    imageFirst () {
+      return require('@/assets/banner-image-1.png')
+    },
+    imageSecond () {
+      return require('@/assets/banner-image-2.png')
+    }
+  }
 }
 </script>
 
