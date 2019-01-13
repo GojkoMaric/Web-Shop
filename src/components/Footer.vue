@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class='col text-center padding'>
-          <p>place icon</p>
+          <p><i class="fas fa-map-marker-alt"></i></p>
           <p class='small-font margin-bottom'>33G King's Rd, London</p>
           <p class='small-font'>++44 20 7730 6787</p>
           <a class='bold small-font' href="#">MORE INFORMATION ></a>

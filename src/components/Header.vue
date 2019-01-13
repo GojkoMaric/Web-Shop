@@ -5,20 +5,18 @@
         <p class='col-md-3 small-font margin-bottom-0'>login / sign up</p>
         <p class='col-md-4 title text-center text-bold' style="margin-bottom: 0">every.day.counts</p>
         <span class="col-md-2"></span>
-        <p class='col-md-1 small-font text-right margin-bottom-0'>logo1</p>
-        <p class='col-md-1 small-font text-right margin-bottom-0'>logo2</p>
+        <p class='col-md-1 small-font text-right margin-bottom-0'><i class="fas fa-heart"></i> 0</p>
+        <p class='col-md-1 small-font text-right margin-bottom-0'><i class="fas fa-shopping-bag"></i> 0</p>
     </div>
     <div class="row container">
       <span class='col-2'></span>
       <span class='col-8 text-center'>
-        <span style="margin-right: 10px">logo3</span>
-        <span style="margin-right: 10px">women</span>
+        <span style="margin-right: 10px"><i class="fas fa-home"></i></span>
+        <span style="margin-right: 10px">women</span>        
         <span style="margin-right: 10px">men</span>
         <span>experience</span>
       </span>
-      <!-- <v-icon>fas fa-lock</v-icon> -->
-      <p class='col-2 text-right'>search</p>
-      <!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
+      <p class='col-2 text-right'><i class="fas fa-search"></i> search</p>
     </div>
   </div>
 </template>
