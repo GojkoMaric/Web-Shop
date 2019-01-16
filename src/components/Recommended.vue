@@ -6,9 +6,9 @@
     <div class="h-100 row">
         <div class="col" v-for="product in products" :key="product.id">
           <div class="text-center">
-            <img :src=product.url width="100%" height="100%" alt="">
-            <p class="margin-bottom-0">{{product.title}} - 100$</p>
-            <a href="#" class="link-style">Add to cart</a>
+            <img :src=product.image_url width="100%" height="100%" alt="">
+            <p class="margin-bottom-0">{{product.name}} - {{product.price}}$</p>
+            <a class="link-style">Add to cart</a>
           </div>
         </div>
     </div>
@@ -25,18 +25,10 @@ export default {
     }
   },
   mounted () {
-    // cors issue => http://api.clothes-shop.devbox21.com/
-    // works fine => https://jsonplaceholder.typicode.com/photos
-
     axios
-      .get('https://jsonplaceholder.typicode.com/photos')
+      .get('http://api.clothes-shop.devbox21.com')
       .then(response => {
-        var data = response.data;
-        data.map(product => {
-          if(product.id < 5) {
-            this.products.push(product);
-          }
-        })
+        this.products = response.data;
       })
       .catch(error => console.log(error));
   },
@@ -61,5 +53,9 @@ export default {
 
 .margin-bottom-0 {
   margin-bottom: 0;
+}
+
+a {
+  cursor: pointer;
 }
 </style>
