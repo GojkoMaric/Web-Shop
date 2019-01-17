@@ -23,14 +23,14 @@
           <p class="bold">{{currentProduct.name}} - {{currentProduct.price}}$</p>
           <div class="row justify-content">
             <p>Quantity: </p>
-            <input v-model="currentProduct.quantity" type="number" class="width-10 height-input margin-left">
+            <input v-model="currentProduct.quantity" type="number" min="1" class="width-10 height-input margin-left">
           </div>
           <p class="text-right bold">Total Price: 
             <span v-if=currentProduct.quantity>{{currentProduct.price * currentProduct.quantity}}</span>
             <span v-else>0</span>
           </p>
           <div class="text-right">
-            <a @click="addToCart(currentProduct)" class="underline bold">Add to cart</a>
+            <button @click="addToCart(currentProduct)" class="" :class="btnDisabled" :disabled="!!!currentProduct.quantity">Add to cart</button>
           </div>
         </div>
       </b-modal>
@@ -55,6 +55,12 @@ export default {
     },
     addToCart: function(currentProduct) {
       this.$refs.addToCartModal.hide();
+      this.$store.commit('addProducts', currentProduct);
+    }
+  },
+  computed: {
+    btnDisabled: function() {
+      return this.currentProduct.quantity ? 'underline bold btn btn-small blue-color' : 'disabled btn btn-small blue-color'
     }
   },
   mounted () {
@@ -114,5 +120,9 @@ a {
 
 .bold {
   font-weight: bold;
+}
+
+.blue-color {
+  color: rgb(0,45,71);
 }
 </style>
